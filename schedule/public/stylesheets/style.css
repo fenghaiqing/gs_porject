@@ -1,0 +1,78 @@
+
+body {
+ background-color:#E1E1E1 ;
+}
+
+
+a {
+  color: #00B7FF;
+}
+.navbar-default{
+  border-color:#444444 ;
+  border-radius: 0px;
+}
+.container-fluid{
+  background-color: #444444;
+}
+
+.form-control.search{
+  background-color: #888888;
+  border-color:#444444 ;
+  -webkit-transition: all .5s;
+  border-radius: 20px;
+  width: 200px;
+  padding-left: 30px;
+}
+.form-control.search:hover{
+  background-color: white;
+  -webkit-transition: all .5s;
+}
+.fa-search{
+  position: relative;
+  left: 28px;
+  top: 2px;
+}
+.navbar-brand >h1{
+  margin-top: -25px;
+  font-family: "Edwardian Script ITC";
+  font-size: 60px;
+  color: #80BD01;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #CCCCCC;
+}
+.navbar-default .navbar-nav > li > a:hover{
+  color: white;
+}
+@media (min-width: 1200px){
+  .container {
+    width: 1200px;
+  }
+}
+.col-lg-3{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.panel{
+  border-color: white;
+}
+.panel-head{
+  margin-top: 20px;
+  border-top: 1px solid #E1E1E1;
+  border-radius: 0px;
+  padding: 10px 10px;
+}
+.scorllre_ul{
+  position: absolute;
+  right: 20px;
+}
+.scorllre{
+  margin-top: 5px;
+  width: 50px;
+  opacity: 0.5;
+  text-align: center;
+}
+.scorllre >a >i{
+ font-size: 20px;
+  color: #888888;
+}
