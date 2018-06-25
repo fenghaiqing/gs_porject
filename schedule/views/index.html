@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../public/fontaswsome/css/all.css" >
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.css" >
     <link href="../public/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
     <link href="../public/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/checkboxes/css/build.css">
     <link rel="stylesheet" href="../public/stylesheets/style.css">
 </head>
 <body>
@@ -30,7 +31,7 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3" id="sider">
             <ul class="list-group">
                 <li class="list-group-item">TO-DO</li>
                 <li class="list-group-item">毕业设计</li>
@@ -46,17 +47,38 @@
             <div class="panel panel-default">
 
                 <div class="panel-body">
+                    <div class="checkbox checkbox-success" style="position: relative;top: -25px;left: -15px">
+                        <input class="styled" type="checkbox">
+                        <label for="checkbox3">
+                        </label>
+                    </div>
+                    <div>
                     面板内容
+                    </div>
                 </div>
                 <div class="panel-head">
-                   <i class="fa fa-clock"></i>
+                  <a href="javaScript:void(0);" title='"'><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                  <a href="javaScript:void(0);"> <i class="fa fa-sun-o" aria-hidden="true"></i></a>
+                  <a href="javaScript:void(0);"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+                    <a href="javaScript:void(0);"><i class="fa fa-retweet" aria-hidden="true"></i></a>
+                    <a href="javaScript:void(0);"> <i class="fa fa-truck-moving"></i></a>
+                    <a href="javaScript:void(0);"> <i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                    <a href="javaScript:void(0);"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></a>
+                    <a href="javaScript:void(0);"><i class="fa fa-calendar-times-o" aria-hidden="true"></i></a>
+
                 </div>
             </div>
 
             <div class="panel panel-default">
 
                 <div class="panel-body">
-                    面板内容
+                    <div class="checkbox checkbox-success" style="position: relative;top: -25px;left: -15px">
+                        <input  class="styled" type="checkbox">
+                        <label for="checkbox3">
+
+                        </label>
+                    </div>
+                    <div>awdfaswdada</div>
                 </div>
                 <div class="panel-head">
 
@@ -68,10 +90,11 @@
 </div>
 <ul class="list-group scorllre_ul">
     <li class="list-group-item scorllre"><a title="添加"><i class="fa fa-plus"></i></a></li>
-    <li class="list-group-item scorllre"><a title="回到顶部"><i class="fas fa-chevron-up"></i></a></li>
+    <li class="list-group-item scorllre"><a title="回到顶部"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></li>
 
 </ul>
 <script src="../public/jquery/jquery.js" />
 <script src="../public/bootstrap/js/bootstrap.min.js" />
+<script src="../public/javascripts/index.js" />
 </body>
 </html>
