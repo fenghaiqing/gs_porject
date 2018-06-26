@@ -76,3 +76,24 @@ a {
  font-size: 20px;
   color: #888888;
 }
+.item_active {
+  border-color:#888888 ;
+  background-color: #888888;
+}
+
+.new_list{
+  padding: 10px 10px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #80BD01;
+}
+.new_list i{
+  padding: 10px 10px;
+}
+.new_list:hover{
+  text-decoration: none;
+  cursor:pointer;
+}
+.badge{
+  background-color:#80BD01 ;
+}

@@ -35,6 +35,6 @@ exports.findByName = function(userName) {
     return User.findAll({ where: { user_name: userName } });
 };
 
-exports.login = function(user) {
-    return User.findOne({ where: user });
+exports.login = function(userName,password) {
+    return User.findOne({ where: {user_name:userName,password:password} });
 };

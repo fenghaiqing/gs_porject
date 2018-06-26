@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.css" >
-    <link href="../public/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="../public/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/checkboxes/css/build.css">
-    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" >
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="checkboxes/css/build.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
 </head>
 <body>
+<div id="sd_index">
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -31,59 +33,21 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-lg-3" id="sider">
+        <div class="col-lg-3" id="sider" style="height: 500px; background-color: white">
+            <router-link to="/foo"><a class="new_list"><i class="fa fa-plus"></i>新建清单</a></router-link>
             <ul class="list-group">
-                <li class="list-group-item">TO-DO</li>
-                <li class="list-group-item">毕业设计</li>
-                <li class="list-group-item">软件开发</li>
-                <li class="list-group-item">
+                <li class="list-group-item " v-on:click="addClass(0)" v-bind:class="{item_active:0==current}">
                     <span class="badge">4</span>
-                    数据库设计
-                </li>
+                    TO-DO</li>
+                <li class="list-group-item" v-on:click="addClass(1)" v-bind:class="{item_active:1==current}">毕业设计</li>
+                <li class="list-group-item" v-on:click="addClass(2)" v-bind:class="{item_active:2==current}">软件开发</li>
+                <li class="list-group-item" v-on:click="addClass(3)" v-bind:class="{item_active:3==current}">数据库设计</li>
 
             </ul>
+
         </div>
         <div class="col-lg-9">
-            <div class="panel panel-default">
-
-                <div class="panel-body">
-                    <div class="checkbox checkbox-success" style="position: relative;top: -25px;left: -15px">
-                        <input class="styled" type="checkbox">
-                        <label for="checkbox3">
-                        </label>
-                    </div>
-                    <div>
-                    面板内容
-                    </div>
-                </div>
-                <div class="panel-head">
-                  <a href="javaScript:void(0);" title='"'><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-                  <a href="javaScript:void(0);"> <i class="fa fa-sun-o" aria-hidden="true"></i></a>
-                  <a href="javaScript:void(0);"><i class="fa fa-calendar" aria-hidden="true"></i></a>
-                    <a href="javaScript:void(0);"><i class="fa fa-retweet" aria-hidden="true"></i></a>
-                    <a href="javaScript:void(0);"> <i class="fa fa-truck-moving"></i></a>
-                    <a href="javaScript:void(0);"> <i class="fa fa-check-square-o" aria-hidden="true"></i></a>
-                    <a href="javaScript:void(0);"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></a>
-                    <a href="javaScript:void(0);"><i class="fa fa-calendar-times-o" aria-hidden="true"></i></a>
-
-                </div>
-            </div>
-
-            <div class="panel panel-default">
-
-                <div class="panel-body">
-                    <div class="checkbox checkbox-success" style="position: relative;top: -25px;left: -15px">
-                        <input  class="styled" type="checkbox">
-                        <label for="checkbox3">
-
-                        </label>
-                    </div>
-                    <div>awdfaswdada</div>
-                </div>
-                <div class="panel-head">
-
-                </div>
-            </div>
+            <router-view></router-view>
         </div>
 
     </div>
@@ -93,8 +57,13 @@
     <li class="list-group-item scorllre"><a title="回到顶部"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></li>
 
 </ul>
-<script src="../public/jquery/jquery.js" />
-<script src="../public/bootstrap/js/bootstrap.min.js" />
-<script src="../public/javascripts/index.js" />
+</div>
+<script src="jquery/jquery.js" ></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="vue/Vue-2.5.16.js"></script>
+<script src="vue/vue-resource.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script src="javascripts/login.js"></script>
+<script src="javascripts/index.js"></script>
 </body>
 </html>
