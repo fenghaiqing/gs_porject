@@ -65,6 +65,11 @@ a {
 .scorllre_ul{
   position: absolute;
   right: 20px;
+  bottom: 30px;
+}
+
+.scorllre_ul li:hover{
+  background-color: #0f0f0f;
 }
 .scorllre{
   margin-top: 5px;
@@ -96,4 +101,67 @@ a {
 }
 .badge{
   background-color:#80BD01 ;
+}
+.list_i{
+  font-size: 30px;
+  color: #C1C1C1;
+}
+.list_i_text{
+  color: #C1C1C1;
+  font-size: 18px;
+  border-bottom: 1px solid #C1C1C1;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.list_panel{
+  padding: 50px 50px;
+  text-align: center;
+}
+
+.list_controller{
+  width: 70%;
+  line-height: 50px;
+  height: 80px;
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+.list_btn{
+  padding-top: 5%;
+  padding-bottom: 15%;
+
+}
+.list_btn button.btn-default{
+  width: 200px;
+  background-color:#C1C1C1 ;
+}
+.list_btn button.btn-primary{
+  width: 200px;
+  background-color:#80BD01 ;
+  border: 1px solid #80BD01;
+}
+.list-group-item{
+  cursor: pointer;
+}
+.list_i_text select{
+  border: none;
+  padding: 10px 5px;
+  width: 200px;
+  text-align: center;
+}
+.list-group-date input{
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list-group-date label{
+  color: #888888;
+}
+.form-group span{
+  color: indianred;
 }

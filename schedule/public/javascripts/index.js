@@ -1,22 +1,26 @@
-import main from 'views/main.vue';
-
-const routes = [
-    { path: '/', component: main },
-    { path: '/main', component: main }
-];
-
-const router = new VueRouter({
-    routes // （缩写）相当于 routes: routes
-})
 
 var vue=new Vue({
-    router,
+    el:"#sd_index",
     data:{
-        current:0
+        current:0,
+        title:null,
+        dataList:null
     },
     methods:{
         addClass:function (index) {
             this.current=index;
+        },
+        queryList: function () {
+            this.$http.post('/scheduleHead/queryHead',{})
+                .then(function(result){
+                    if(result.body.code==200){
+                        this.dataList=result.body.data;
+                    }
+                });
         }
+    },
+    created(){
+        this.queryList();
     }
-}).$mount('#sd_index')
+});
+

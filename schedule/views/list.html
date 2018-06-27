@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" >
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="checkboxes/css/build.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+<body>
+<div id="sc_list">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><h1 >schedule</h1></a>
+            </div>
+            <div>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control search" >
+                    </div>
+                </form>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="nav-navcolor"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
+                <li><a href="#" class="nav-navcolor"><span class="glyphicon glyphicon-log-in"></span>注销</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default list_panel" v-show="!isSuccess">
+                    <div><i class="fa fa-list list_i"></i></div>
+                    <div class="list_i_text">创建清单</div>
+                    <div class="panel-body">
+                        <form class="form form-horizontal">
+                            <div class="form-group">
+                                <input class="form-control list_controller" v-model="title" placeholder="给清单起个名称">
+                            </div>
+                            <div class="form-group list_btn">
+                                <button class="btn btn-default" v-on:click="cancel" type="button">取消</button>
+                                <button class="btn btn-primary" type="button"v-on:click="addList()" >创建清单</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default list_panel"  v-show="isSuccess">
+            <div class="panel panel-default list_panel">
+                <div><i class="fa fa fa-check-square-o list_i"></i></div>
+                <div class="list_i_text">添加成功</div>
+                <div class="panel-body">
+                    <form class="form form-horizontal">
+                        <div class="form-group">
+                            <input class="form-control list_controller" readonly="readonly" v-model="title" placeholder="给清单起个名称">
+                        </div>
+                        <div class="form-group list_btn">
+                            <button class="btn btn-default" v-on:click="cancel" type="button">返回</button>
+                            <button class="btn btn-primary" type="button"v-on:click="continueAdd()" >继续添加</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery/jquery.js" ></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="vue/Vue-2.5.16.js"></script>
+<script src="vue/vue-resource.js"></script>
+<script src="javascripts/add.js"></script>
+</body>
+</html>

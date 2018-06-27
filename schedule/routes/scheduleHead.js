@@ -10,7 +10,7 @@ router.post('/addScheduleHead',jsonParser,function(req,res,next){
     head.createDate=new Date();
     scheduleHead.findOne(req.body.title) .then(function(result){
         if(result!=null) {
-            throw {code: 501, msg:"代办已存在！"};
+                throw {code: 501, msg:"代办已存在！"};
         }
         return scheduleHead.addScheduleHead(req.body);
     }).then(function(result){

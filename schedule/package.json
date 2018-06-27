@@ -19,7 +19,9 @@
     "mysql2": "^1.5.3",
     "pug": "2.0.0-beta11",
     "sequelize": "^4.38.0",
-    "vue-resource": "^1.5.1"
+    "vue": "^2.5.16",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.0.1"
   },
   "main": "app.js",
   "author": "",
